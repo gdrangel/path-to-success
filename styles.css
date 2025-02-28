@@ -1,0 +1,358 @@
+/* -------------------- CSS BY NAME -------------------------------------- */
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+/*-------------------- CSS REST ---------------------------------------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--purple);
+}
+
+h1, h2 {
+    font-family: 'Kavoon', serif;
+}
+
+h3, h4, p, a, th, td {
+    font-family: 'Inter', serif;
+}
+
+h1 {
+    font-size: 3em;
+    background-color: var(--lavender);
+    color: var(--white);
+    padding: 50px;
+}
+
+a, h3 {
+    font-size: 1.5em;
+}
+
+h3 {
+    color: var(--yellow);
+    padding: 10px;
+}
+
+h2 {
+    font-size: 2em;
+    color: var(--white);
+}
+
+h4 {
+    font-size: 1.15em;
+    color: var(--purple);
+}
+
+header, th, td {
+    text-align: center;
+}
+
+header p {
+    background-color: var(--pink);
+    color: var(--white);
+    max-width: 90vw;
+    margin: 0 auto;
+    padding: 10px 10px 0px 10px;
+    font-style: italic;
+}
+
+.part2, .nav2 {
+    display: none;
+}
+
+h1, header p, nav ul, footer{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.s2, .why div {
+    border-radius: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 0;
+    z-index: 5;
+    background-color: var(--yellow);
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 10px;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    color: var(--dark-gray);
+    font-weight: bold;
+    font-style: italic;
+}
+
+section {
+    padding: 20px;
+}
+
+.services {
+    margin-top: 30px;
+}
+
+.miniservices {
+    display: grid;
+}
+
+.miniservices  {
+    gap: 20px;
+    justify-items: center;
+}
+
+.s1 {
+    display: grid;
+    gap: 10px;
+}
+
+.s2 {
+    background-color: var(--white);
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.s2 * {
+    padding: 10px;
+}
+
+.s2 p {
+    line-height: 1.5;
+}
+
+.space {
+    display: none;
+}
+
+.why, .take {
+    background-color: var(--pink);
+}
+
+.w1 {
+    background-color: var(--teal);
+}
+
+.w2 {
+    background-color: var(--lavender);
+}
+
+.w3 {
+    background-color: var(--yellow);
+}
+
+.w4 {
+    background-color: var(--white);
+}
+
+.why2 {
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.why2 div {
+    padding:40px 5px;
+}
+
+.why div p {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    border: 1px solid var(--yellow);
+    background-color: var(--white);
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+  
+table th {
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+    padding: 10px;
+}
+  
+table td {
+    border-top: 1px solid var(--yellow);
+    padding: 10px;
+}
+  
+table th, table td {
+    border-right: 1px solid var(--yellow);
+}
+  
+table th:last-child, table td:last-child {
+    border-right: none;
+}
+
+.pricing {
+    padding: 10px 30px;
+}
+
+.pricing2 {
+    display: grid;
+    gap: 20px;
+}
+
+.take div p {
+    color: var(--white);
+}
+
+button {
+    background-color: var(--white);
+    font-weight: 800;
+    border: none; 
+    padding: 20px 60px; 
+    border-radius: 10px; 
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.6); 
+    text-align: center;
+}
+
+.take div {
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+    justify-items: center;
+}
+
+footer {
+    background-color: var(--lavender);
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+}
+
+footer p {
+    color: var(--white);
+    text-align: center;
+}
+
+footer p:last-of-type {
+    text-decoration: underline;
+}
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --teal: #4CA7C0;
+    --purple: #484FB7;
+    --lavender: #6B8FE7;
+    --yellow: #E9BB57;
+    --pink: #D9526F;
+    --dark-gray: #1E1E1E;
+    --white: #ffffff;
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media screen and (min-width: 450px) {
+
+    .miniservices  {
+        grid-template-columns: 1fr;
+    }
+
+    table {
+        max-width: 50vw;
+        margin: 0 auto;
+    }
+
+    .take div {
+        grid-template-columns: 1fr;
+    }
+
+}
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media screen and (min-width: 620px) {
+
+    .part2 {
+        display: inline;
+    }
+
+    .s1  {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .long {
+        grid-column: 1/-1;
+    }
+
+    .why2 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .pricing2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .take div {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 950px) {
+
+    .nav2 {
+        display: inline;
+    }
+
+    .nav1 {
+        display: none;
+    }
+
+    .long {
+        grid-column: auto;
+    }
+
+    .s1  {
+        grid-template-columns: 1fr;
+    }
+
+    .miniservices {
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    .space {
+        display: inline;
+    }
+
+    .why2 div {
+        padding: 50px 50px;
+    }
+
+    .pricing2 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1280px) {
+
+    body {
+        max-width: 1280px;
+        margin: 0 auto; 
+    }
+
+    header p {
+        max-width: 65vw;
+    }
+
+}
